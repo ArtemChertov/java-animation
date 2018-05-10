@@ -4,12 +4,18 @@ import javax.swing.SwingUtilities;
 
 public class TitlesFrame extends JFrame {
 
-// TitlesFrame initialization
+/**
+ * TitlesFrame initialization
+ */
+
    public TitlesFrame() {
       this.initUI();
    }
 
-// setting ui default options
+/**
+ * setting ui default options
+ */
+
    private void initUI() {
       this.setTitle("Кривые фигуры");
       this.setDefaultCloseOperation(2);

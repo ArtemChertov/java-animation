@@ -17,7 +17,10 @@ public class TitlesPanel extends JPanel implements ActionListener {
    private int start_angle = 0;
    private int shape;
 
-// panel initialization
+/**
+ * panel initialization
+ */
+
    public TitlesPanel(int _shape) {
       this.shape = _shape;
       this.animation = new Timer(50, this);
@@ -32,7 +35,10 @@ public class TitlesPanel extends JPanel implements ActionListener {
 
    }
 
-// draw engine
+/**
+ * draw engine
+ */
+
    private void doDrawing(Graphics g) {
       this.is_done = false;
       this.g2d = (Graphics2D)g;
