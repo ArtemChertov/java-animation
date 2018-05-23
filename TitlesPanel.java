@@ -15,14 +15,16 @@ public class TitlesPanel extends JPanel implements ActionListener {
    private Timer animation;
    private boolean is_done = true;
    private int start_angle = 0;
-   private int shape;
+   private String shape;
+   private String outline;
 
 /**
  * panel initialization
  */
 
-   public TitlesPanel(int _shape) {
-      this.shape = _shape;
+   public TitlesPanel(String type, String outline) {
+      this.shape = type;
+      this.outline = outline;
       this.animation = new Timer(50, this);
       this.animation.setInitialDelay(50);
       this.animation.start();
@@ -47,7 +49,7 @@ public class TitlesPanel extends JPanel implements ActionListener {
       Insets insets = this.getInsets();
       int w = size.width - insets.left - insets.right;
       int h = size.height - insets.top - insets.bottom;
-      ShapeFactory shape = new ShapeFactory(this.shape);
+      ShapeFactory shape = new ShapeFactory(this.shape, this.outline);
       this.g2d.setStroke(shape.stroke);
       this.g2d.setPaint(shape.paint);
       double angle = (double)(this.start_angle++);

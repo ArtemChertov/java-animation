@@ -4,6 +4,9 @@ import javax.swing.SwingUtilities;
 
 public class TitlesFrame extends JFrame {
 
+   private String type;
+   private String outline;
+
 /**
  * TitlesFrame initialization
  */
@@ -18,8 +21,12 @@ public class TitlesFrame extends JFrame {
 
    private void initUI() {
       this.setTitle("Кривые фигуры");
+
+      this.type = "square";
+      this.outline = "with-gradient";
+
       this.setDefaultCloseOperation(2);
-      this.add(new TitlesPanel(51));
+      this.add(new TitlesPanel(this.type, this.outline));
       this.setSize(350, 350);
       this.setLocationRelativeTo((Component)null);
    }
